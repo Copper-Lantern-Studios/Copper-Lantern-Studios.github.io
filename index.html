@@ -13,14 +13,29 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            font-family: Georgia, serif;
         }
 
-        img {
+        .container {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .container img {
             max-width: 600px;
             width: 80%;
             height: auto;
-            opacity: 0;
-            animation: fadeIn 2s ease forwards;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            margin-top: 24px;
+            color: rgba(184, 115, 51, 0.65);
+            font-size: 0.95rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
         }
 
         @keyframes fadeIn {
@@ -36,6 +51,9 @@
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="Copper Lantern Studios">
+    <div class="container">
+        <img src="logo.png" alt="Copper Lantern Studios">
+        <div class="tagline">Apps • Games • Tools</div>
+    </div>
 </body>
 </html>
