@@ -6,14 +6,33 @@
     <title>Copper Lantern Studios</title>
 
     <style>
+        :root {
+            --background: #030405;
+            --copper: #ab501c;
+            --text: #f3e7dc;
+            --muted: #a89586;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            background: #030405;
+            background: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            font-family: Georgia, serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: Georgia, serif;
+            padding: 2rem;
         }
 
         .container {
@@ -31,10 +50,28 @@
         }
 
         .tagline {
-            color: #ab501c;
+            color: var(--copper);
             font-size: 0.95rem;
             letter-spacing: 0.4em;
             text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.25rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+            margin: 0 0.4rem;
+        }
+
+        footer a:hover {
+            color: var(--copper);
         }
 
         @keyframes fadeIn {
@@ -50,9 +87,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Copper Lantern Studios">
-        <div class="tagline">Apps • Games • Tools</div>
-    </div>
+    <main>
+        <div class="container">
+            <img src="logo.png" alt="Copper Lantern Studios">
+            <div class="tagline">Apps • Games • Tools</div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/support/">Support</a>
+        ·
+        <a href="/privacy/">Privacy</a>
+    </footer>
 </body>
 </html>
