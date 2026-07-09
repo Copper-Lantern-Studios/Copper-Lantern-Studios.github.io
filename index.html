@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copper Lantern Studios</title>
+    <meta name="description" content="Copper Lantern Studios creates software, games, and educational tools including Lantern Canvas, a logic gate simulator and CPU simulator for computer science education.">
+    <link rel="canonical" href="https://copperlanternstudios.com/">
 
     <style>
         :root {
@@ -11,6 +13,7 @@
             --copper: #ab501c;
             --text: #f3e7dc;
             --muted: #a89586;
+            --border: #2b1a10;
         }
 
         * {
@@ -57,6 +60,26 @@
             margin-top: 0.5rem;
         }
 
+        .links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--copper);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.7rem 1.1rem;
+        }
+
+        .links a:hover {
+            background: rgba(171, 80, 28, 0.12);
+        }
+
         footer {
             text-align: center;
             padding: 1.25rem;
@@ -90,13 +113,18 @@
     <main>
         <div class="container">
             <img src="logo.png" alt="Copper Lantern Studios">
-            <div class="tagline">Apps • Games • Tools</div>
+            <div class="tagline">Apps | Games | Tools</div>
+            <div class="links">
+                <a href="/lantern-canvas/">Explore Lantern Canvas</a>
+            </div>
         </div>
     </main>
 
     <footer>
         <a href="/support/">Support</a>
-        ·
+        |
+        <a href="/lantern-canvas/">Lantern Canvas</a>
+        |
         <a href="/privacy/">Privacy</a>
     </footer>
 </body>
