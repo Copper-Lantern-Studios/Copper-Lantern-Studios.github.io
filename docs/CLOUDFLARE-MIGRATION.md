@@ -1,6 +1,6 @@
 # Cloudflare migration
 
-Status: prepared and locally validated; Cloudflare account sign-in and hosted acceptance tests remain required. DNS and GitHub Pages have not been changed.
+Status: manually deployed to https://copper-lantern-studios.mind-nl.workers.dev/ (version a3baac8c). All 14 public files match source SHA-256 hashes; all four page URLs return 200 and missing/configuration paths return 404. DNS and GitHub Pages have not been changed. Git integration and domain cutover remain.
 
 ## Source and deployment
 
@@ -10,7 +10,7 @@ There was no checked-in Actions workflow or site build configuration. The site c
 
 Use Workers Static Assets and Workers Builds GitHub integration. Existing HTML, images, canonical URLs, sitemap and mail links remain unchanged. The build copies public files into dist, excluding configuration and repository metadata. No custom domain or route is included in Wrangler, so initial deployments cannot take over production traffic.
 
-After merging the migration PR, in Cloudflare Workers & Pages create/import a Worker from the existing GitHub repository:
+After merging the migration PR, in the existing copper-lantern-studios Worker open Settings > Builds > Git repository > Connect. Do not create a duplicate Worker:
 
 - Authorize the Cloudflare GitHub app for this repository only (organization-owner approval may be required).
 - Worker name: copper-lantern-studios
